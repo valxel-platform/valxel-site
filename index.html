@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Valxel — Vertical software, 85% agentic</title>
+<meta name="description" content="Valxel builds high-efficiency vertical software for exceptional customer experiences, powered by an 85% agentic SDLC." />
+<link rel="icon" href="assets/favicon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+:root{--navy:#122033;--paper:#fff;--deep:#f4f7fb;--panel:#e7f6fb;--line:#e3e9f0;--ink:#122033;--muted:#5c6d80;--faint:#8b98a8;--cyan:#0ea8c8;--blue:#1a6dff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Outfit,ui-sans-serif,system-ui,sans-serif;line-height:1.55}
+button{font:inherit;cursor:pointer}img{display:block}a{color:inherit;text-decoration:none}
+.wrap{max-width:72rem;margin:0 auto;padding:0 1.25rem}
+header{position:sticky;top:0;z-index:30;border-bottom:1px solid var(--line);background:rgba(255,255,255,.92);backdrop-filter:blur(10px)}
+.bar{height:4rem;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:.6rem}
+.mark{height:2rem;width:auto}.word{height:1rem;width:auto}
+nav.desk{display:none;gap:1.75rem;align-items:center;font-size:.9rem;color:var(--muted)}
+.btn{display:inline-flex;align-items:center;justify-content:center;height:3rem;padding:0 1.25rem;border-radius:999px;font-weight:500}
+.btn-dark{background:var(--navy);color:#fff;height:2.5rem}.btn-cyan{background:var(--cyan);color:var(--navy);gap:.4rem}
+.btn-ghost{border:1px solid var(--line);background:#fff}
+.iconbtn{display:grid;place-items:center;height:2.75rem;width:2.75rem;border-radius:999px;border:1px solid var(--line);background:#fff}
+.mobile{display:none;border-top:1px solid var(--line);padding:.4rem 1.25rem .8rem}
+.mobile a{display:block;padding:.75rem .4rem}
+.hero{display:grid;gap:3rem;padding:4rem 0 5rem}
+.kicker{font-size:.75rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--cyan);margin:0}
+h1,h2,h3,.display{font-family:Syne,ui-sans-serif,sans-serif}
+h1{font-size:3rem;line-height:1;letter-spacing:-.02em;margin:.8rem 0 0;font-weight:700}
+h1 span{display:block;color:var(--cyan)}
+.lede{max-width:36rem;font-size:1.125rem;color:var(--muted)}
+.row{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2rem}
+.card{border:1px solid var(--line);border-radius:1.25rem;background:var(--deep)}
+.pad{padding:1.5rem}
+.meter-top{display:flex;align-items:flex-end;justify-content:space-between}
+.big{font-size:3rem;line-height:1;color:var(--cyan);margin:0}
+.track{margin-top:1.25rem;height:.75rem;border-radius:999px;background:var(--panel);overflow:hidden}
+.track span{display:block;height:100%;width:85%;border-radius:999px;background:linear-gradient(90deg,var(--cyan),var(--blue))}
+.stats{margin-top:1.5rem;display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+.stat{border:1px solid var(--line);border-radius:.75rem;background:#fff;padding:.75rem}
+.stat b{display:block;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);font-weight:500}
+.band{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--deep)}
+.split{display:grid;gap:2.5rem;padding:4rem 0}
+h2{font-size:1.9rem;line-height:1.15;margin:.6rem 0 0;font-weight:700}
+.muted{color:var(--muted)} .faint{color:var(--faint);font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;margin:0}
+.section{padding:5rem 0}
+.steps{margin-top:2.5rem;display:grid;gap:1rem;list-style:none;padding:0}
+.steps li,.pillar{border:1px solid var(--line);border-radius:1.25rem;padding:1.25rem}
+.steps li{background:var(--deep)} .pillar{background:#fff}
+.num{color:var(--cyan);font-family:Syne,sans-serif;margin:0}
+.pillars{margin-top:2.5rem;display:grid;gap:1rem}
+.headrow{display:flex;flex-direction:column;gap:1rem}
+.filters{display:flex;flex-wrap:wrap;gap:.5rem}
+.filters button,.product{border-radius:999px}
+.filters button{height:2.5rem;padding:0 1rem;font-size:.875rem;border:1px solid var(--line);background:#fff;color:var(--muted)}
+.filters button.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.grid{margin-top:2rem;display:grid;gap:1.5rem}
+.products{display:grid;gap:.75rem;list-style:none;padding:0;margin:0}
+.product{width:100%;text-align:left;border-radius:1.25rem;border:1px solid var(--line);background:var(--deep);padding:1rem}
+.product.on{border-color:var(--cyan);background:var(--panel)}
+.detail{border:1px solid var(--line);border-radius:1.25rem;background:var(--deep);padding:1.5rem}
+.detail img{height:3rem;width:auto}
+form{display:grid;gap:.75rem}
+label{display:grid;gap:.25rem;font-size:.875rem;color:var(--muted)}
+input,select,textarea{font:inherit;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:.75rem;padding:.75rem}
+input,select{height:3rem}
+.note{border:1px solid rgba(14,168,200,.4);border-radius:1.25rem;background:#fff;padding:1.5rem}
+footer{border-top:1px solid var(--line)}
+.foot{display:flex;flex-direction:column;gap:.75rem;padding:2rem 0;font-size:.875rem;color:var(--faint)}
+.foot .brand .mark{height:1.5rem}.foot .brand .word{height:.85rem}
+@media(min-width:768px){
+  nav.desk{display:flex}.iconbtn{display:none}
+  .hero{grid-template-columns:1fr 1fr;align-items:center;padding-top:6rem}
+  h1{font-size:3.5rem}.split{grid-template-columns:1fr 1fr;align-items:start}
+  .steps{grid-template-columns:repeat(4,1fr)}.pillars{grid-template-columns:1fr 1fr}
+  .headrow{flex-direction:row;align-items:flex-end;justify-content:space-between}
+  .brief{grid-template-columns:1fr 1fr}.foot{flex-direction:row;align-items:center;justify-content:space-between}
+}
+@media(min-width:1024px){.grid{grid-template-columns:1.2fr .8fr}.detail{position:sticky;top:6rem}}
+@media(min-width:640px){.products{grid-template-columns:1fr 1fr}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#top"><img class="mark" src="assets/mark.png" alt="" /><img class="word" src="assets/wordmark.png" alt="VALXEL" /></a>
+    <nav class="desk">
+      <a href="#model">Model</a>
+      <a href="#pillars">Pillars</a>
+      <a href="#products">Products</a>
+      <a class="btn btn-dark" href="#briefing">Request a briefing</a>
+    </nav>
+    <button class="iconbtn" id="menu" aria-label="Open menu" type="button">Menu</button>
+  </div>
+  <nav class="mobile" id="mobile" hidden>
+    <a href="#model">Model</a><a href="#pillars">Pillars</a><a href="#products">Products</a><a href="#briefing">Briefing</a>
+  </nav>
+</header>
+<main id="top">
+  <section class="wrap hero">
+    <div>
+      <p class="kicker">Innovating across life · systems · future</p>
+      <h1>Vertical software,<span>built 85% by agents.</span></h1>
+      <p class="lede">Valxel engineers purpose-built products for exceptional customer experiences. Human effort stays at architectural intent. The rest of the software development lifecycle runs on an agentic framework.</p>
+      <div class="row">
+        <a class="btn btn-cyan" href="#products">See the products</a>
+        <a class="btn btn-ghost" href="#model">The engineering model</a>
+      </div>
+    </div>
+    <div class="card pad">
+      <div class="meter-top"><p class="display" style="margin:0;color:var(--muted);font-size:.9rem">AGENTIC SDLC</p><p class="big display">85%</p></div>
+      <div class="track"><span></span></div>
+      <div class="stats">
+        <div class="stat"><b>Autonomous</b>Build, test, upkeep</div>
+        <div class="stat"><b>Human</b>15–20% intent</div>
+        <div class="stat"><b>From scratch</b>No legacy rewrite</div>
+        <div class="stat"><b>Overhead</b>Self-healing code</div>
+      </div>
+    </div>
+  </section>
+  <section class="band"><div class="wrap split">
+    <div><p class="faint">The bottleneck</p><h2>Traditional delivery is still mostly manual.</h2></div>
+    <div class="muted">
+      <p>Engineering teams spend months on boilerplate, then more months paying down maintenance. The product the customer feels is whatever is left after that debt.</p>
+      <p>Valxel does not modernize old code. We engineer superior vertical products from scratch, and we cap manual effort at the decisions that actually need a person.</p>
+    </div>
+  </div></section>
+  <section id="model" class="wrap section">
+    <p class="kicker">The Valxel engineering model</p>
+    <h2>85% agentic SDLC. Humans keep the architecture.</h2>
+    <ol class="steps" id="steps"></ol>
+  </section>
+  <section id="pillars" class="band"><div class="wrap section">
+    <h2>Core pillars</h2>
+    <div class="pillars" id="pillars-list"></div>
+  </div></section>
+  <section id="products" class="wrap section">
+    <div class="headrow">
+      <div><p class="kicker">The portfolio</p><h2>One mark. Many products.</h2></div>
+      <div class="filters" id="filters"></div>
+    </div>
+    <div class="grid">
+      <ul class="products" id="list"></ul>
+      <aside class="detail" id="detail"></aside>
+    </div>
+  </section>
+  <section id="briefing" class="band"><div class="wrap section brief">
+    <div>
+      <h2>Talk through a vertical.</h2>
+      <p class="muted">Tell us which product you want to see. We reply with a briefing on how the 85% model would run it — not a generic demo script.</p>
+    </div>
+    <div id="formbox"></div>
+  </div></section>
+</main>
+<footer><div class="wrap foot">
+  <div class="brand"><img class="mark" src="assets/mark.png" alt="" /><img class="word" src="assets/wordmark.png" alt="VALXEL" /></div>
+  <p>Innovating across life · systems · future</p>
+</div></footer>
+<script>
+const products = [{"id":"emr","name":"EMR","vertical":"Healthcare","line":"Clinical records that stay current around the visit, not after it.","detail":"A native agentic electronic medical record. Charting, orders, and follow-up move with the care team so staff spend time with patients, not screens."},{"id":"medspa","name":"Med Spa","vertical":"Healthcare","line":"Booking, treatment plans, and follow-through in one calm surface.","detail":"Purpose-built for aesthetic practices. Intake, scheduling, consent, and aftercare stay coordinated so the visit feels considered from first inquiry to last note."},{"id":"ag","name":"Ag Tech","vertical":"Agriculture","line":"Yield, procurement, and field operations without the spreadsheet layer.","detail":"Vertical software for growers and operators. Monitoring, procurement, and marketplace workflows sit on one agentic runtime instead of a stack of disconnected tools."},{"id":"pos","name":"POS","vertical":"Commerce","line":"A point of sale that closes the day without a second system.","detail":"High-throughput checkout with inventory, staff, and settlement already in the product. Operators stop reconciling tools that were never designed to talk."},{"id":"apx","name":"APX","vertical":"Payments","line":"An AI payment exchange for routing, reconciliation, and exceptions.","detail":"APX routes transactions, watches exceptions, and keeps ledgers aligned. Humans set policy. The exchange handles the volume."},{"id":"sdlc","name":"Agentic SDLC","vertical":"Engineering","line":"The framework behind the products: 85% autonomous, 15–20% intent.","detail":"The engineering model itself, offered as a product. Architectural intent stays human. Construction, tests, and upkeep run on an agentic runtime."},{"id":"shared","name":"Shared Services","vertical":"Operations","line":"The common layer every vertical product already knows how to use.","detail":"Identity, billing, notifications, and operational controls built once and shared. Each product stays focused on its vertical instead of rebuilding the same machinery."},{"id":"platform","name":"Platform","vertical":"Platform","line":"The runtime every Valxel product is born on.","detail":"One agentic platform under EMR, Ag Tech, POS, APX, and Med Spa. New verticals start from the same foundation instead of a fresh codebase."}];
+const steps = [{"n":"01","title":"Intent","body":"People set architecture and product strategy. That is the 15–20% that stays human."},{"n":"02","title":"Construction","body":"Agentic systems write the product, the tests, and the integrations from that intent."},{"n":"03","title":"Uptime","body":"The codebase watches itself, patches drift, and stays current without a maintenance queue."},{"n":"04","title":"Vertical","body":"What ships is a purpose-built product for one industry, not a generic platform with a skin."}];
+const pillars = [{"title":"Native agentic products","body":"Healthcare, AgTech, POS, and Med Spas are built from day one on autonomous runtimes — not wrapped around yesterday’s code."},{"title":"Peak operational efficiency","body":"Workflows and automation remove the administrative drag that slows staff and operators."},{"title":"Elevated customer experience","body":"Interfaces stay modern and high-throughput, so the person at the end of the product feels none of the machinery."},{"title":"Low maintenance overhead","body":"Self-healing, autonomously tested code stays current without burning a team on upkeep."}];
+let filter = "All", active = "emr";
+const verticals = ["All", ...new Set(products.map(p => p.vertical))];
+document.getElementById("steps").innerHTML = steps.map(s => `<li><p class="num">${s.n}</p><h3>${s.title}</h3><p class="muted">${s.body}</p></li>`).join("");
+document.getElementById("pillars-list").innerHTML = pillars.map(p => `<article class="pillar"><h3>${p.title}</h3><p class="muted">${p.body}</p></article>`).join("");
+function render(){
+  const shown = filter === "All" ? products : products.filter(p => p.vertical === filter);
+  if (!shown.some(p => p.id === active)) active = shown[0].id;
+  const focus = products.find(p => p.id === active);
+  document.getElementById("filters").innerHTML = verticals.map(v => `<button type="button" class="${v===filter?"on":""}" data-f="${v}">${v}</button>`).join("");
+  document.getElementById("list").innerHTML = shown.map(p => `<li><button type="button" class="product ${p.id===active?"on":""}" data-id="${p.id}"><p class="faint" style="letter-spacing:.14em">${p.vertical}</p><p class="display" style="font-size:1.25rem;margin:.4rem 0 0">VALXEL ${p.name}</p><p class="muted" style="font-size:.875rem">${p.line}</p></button></li>`).join("");
+  document.getElementById("detail").innerHTML = `<img src="assets/mark.png" alt="" /><p class="kicker" style="margin-top:1.25rem">${focus.vertical}</p><h3 class="display" style="font-size:1.8rem;margin:.4rem 0 0">VALXEL ${focus.name}</h3><p class="muted">${focus.detail}</p>`;
+}
+document.getElementById("filters").addEventListener("click", e => { const b = e.target.closest("button"); if(!b) return; filter = b.dataset.f; render(); });
+document.getElementById("list").addEventListener("click", e => { const b = e.target.closest("button"); if(!b) return; active = b.dataset.id; render(); });
+render();
+const menu = document.getElementById("menu"), mobile = document.getElementById("mobile");
+menu.addEventListener("click", () => { const open = mobile.hidden; mobile.hidden = !open; menu.textContent = open ? "Close" : "Menu"; menu.setAttribute("aria-label", open ? "Close menu" : "Open menu"); });
+mobile.addEventListener("click", e => { if(e.target.tagName === "A"){ mobile.hidden = true; menu.textContent = "Menu"; }});
+function form(){
+  const opts = products.map(p => `<option>${p.name}</option>`).join("");
+  document.getElementById("formbox").innerHTML = `<form id="brief"><label>Name<input name="name" required /></label><label>Work email<input name="email" type="email" required /></label><label>Product<select name="product" required>${opts}</select></label><label>What should the product do<textarea name="note" rows="4" required></textarea></label><button class="btn btn-cyan" type="submit">Request a briefing</button></form>`;
+  document.getElementById("brief").addEventListener("submit", e => { e.preventDefault(); document.getElementById("formbox").innerHTML = `<div class="note"><p class="display" style="font-size:1.5rem;margin:0">Request noted.</p><p class="muted">This page does not send or store the form. Wire it to your own endpoint before launch.</p><button class="btn btn-ghost" style="margin-top:1.25rem" id="again" type="button">Write another</button></div>`; document.getElementById("again").addEventListener("click", form); });
+}
+form();
+</script>
+</body>
+</html>
